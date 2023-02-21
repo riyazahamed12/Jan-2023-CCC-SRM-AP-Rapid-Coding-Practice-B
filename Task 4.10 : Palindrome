@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+int palindrome(char* str)
+{
+	//your code here    
+    int i,count=0,n;
+    n=strlen(str);
+    for(i=0;i<n/2;i++)  
+    {
+        if(str[i]==str[n-i-1])
+        count++;
+     }
+     if(count==i)
+        return 1;
+    else
+        return 0;
+}	
+int main()
+{
+  char str[50];
+  gets(str);
+  printf("%d", palindrome(str));
+  return 0;
+}
+
+
